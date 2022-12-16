@@ -1,0 +1,24 @@
+-- To check for duplicate records in the customer table
+SELECT customer_id ,
+      store_id ,
+      first_name ,
+      last_name ,
+      email ,
+      address_id ,
+      activebool ,
+      create_date ,
+      last_update ,
+      active ,
+      COUNT (*)
+FROM customer
+GROUP BY customer_id ,
+    store_id ,
+    first_name ,
+    last_name ,
+    email ,
+    address_id ,
+    activebool ,
+    create_date ,
+    last_update ,
+    active
+HAVING COUNT (*) > 1
