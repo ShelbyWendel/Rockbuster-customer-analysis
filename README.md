@@ -1,2 +1,2 @@
 # Rockbuster-customer-analysis
-SQL project for CareerFoundry exploring the customer base of the Rockbuster movie rental company
+The objective of this project was to perform a basic customer analysis, and identify regions with high customer activity.
