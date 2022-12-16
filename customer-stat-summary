@@ -1,0 +1,20 @@
+-- To produce summary statistics for the customer table
+SELECT MIN(customer_id) AS minimum_customer_id,
+        MAX(customer_id) AS maximum_customer_id,
+        AVG(customer_id) AS average_customer_id,
+        MIN(store_id) AS minimum_store_id,
+        MAX(store_id) AS maximum_store_id,
+        AVG(store_id) AS average_store_id,
+        MODE () WITHIN GROUP (ORDER BY first_name) AS mode_first_name,
+        MODE () WITHIN GROUP (ORDER BY last_name) AS mode_last_name,
+        MODE () WITHIN GROUP (ORDER BY email) AS mode_email,
+        MAX(address_id) AS maximum_address_id,
+        MIN(address_id) AS minimum_address_id,
+        AVG(address_id) AS minimum_address_id,
+        MODE() WITHIN GROUP (ORDER BY activebool) AS mode_activeboolian,
+        MIN(create_date) AS earliest_create_date,
+        MAX(create_date) AS most_recent_create_date,
+        MIN(last_update) AS oldest_last_update,
+        MAX(last_update) AS most_recent_last_update,
+        MODE () WITHIN GROUP (ORDER BY active) AS mode_active
+FROM customer;
